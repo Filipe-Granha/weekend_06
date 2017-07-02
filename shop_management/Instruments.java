@@ -21,5 +21,5 @@ public String getType() { // all child classes will have access to this method
 public String getMaterial() { // all child classes will have access to this method
   return this.material;
 }
-
+ 
 }
