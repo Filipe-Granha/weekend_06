@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import behaviours.*;
 
 
- 
+
 public class Shop { 
   
 
@@ -13,28 +13,28 @@ public class Shop {
 
 
   public Shop(String name) { // ??    constructor --> Why don't we insert ArrayList as an argument?
-    this.name = name;
-    this.stock = new ArrayList<Sellable>();
-  }
+  this.name = name;
+  this.stock = new ArrayList<Sellable>();
+}
 
 
-  public String getName() {
-    return this.name;
-  }
- 
-
-  public int stockCount(){
-    return this.stock.size();
-  }
-
-  public void addItem(Sellable item){
-   this.stock.add(item);
-  }
+public String getName() {
+  return this.name;
+}
 
 
-  public Sellable removeItem(){
-    if(stockCount() > 0){
-      return stock.remove(0);
+public int stockCount() {
+  return this.stock.size();
+}
+
+  public void addItem(Sellable anyItem) { // adds literally any item categorized as Sellable to the array Stock
+   this.stock.add(anyItem);
+ }
+
+
+ public Sellable removeItem() { 
+  if(stockCount() > 0) {
+      return stock.remove(0); // removes item with index 0, if there is any item inside the array
     }
     return null;
   }
@@ -43,10 +43,10 @@ public class Shop {
   public int totalPotentialProfit() {
     int count = 0;
     for(Sellable item : this.stock) { // I chose 'item', but could have been any other name
-     count += item.calculateMarkup();
-    }
-   return count;
+     count += item.calculateMarkup(); // applies Markup to each item in the array, and adds result to counter
    }
+   return count;
+ }
 
 
 }

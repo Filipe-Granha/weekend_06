@@ -9,13 +9,13 @@ public class GuitarTest {
   Guitar rockGuitar;
 
   @Before
-  public void before() {
-    rockGuitar = new Guitar("strings", "metal", "black", 6, 100, 150);
+  public void before() { // creates a guitar object to be used in all the tests
+    rockGuitar = new Guitar(InstrumentType.STRINGS, "metal", "black", 6, 100, 150);
   }
 
   @Test
-  public void hasType() {
-    assertEquals("strings", rockGuitar.getType());
+  public void hasType() { 
+    assertEquals(InstrumentType.STRINGS, rockGuitar.getType()); // getType inherited from superclass
   }
 
 

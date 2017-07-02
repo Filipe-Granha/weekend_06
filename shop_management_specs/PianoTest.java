@@ -9,14 +9,21 @@ public class PianoTest {
   Piano classicPiano;
 
   @Before
-  public void before() {
-    classicPiano = new Piano("percussion", "wood", "black", 88, 500, 1000);
+  public void before() { // creates a piano object to be used in all the tests
+    classicPiano = new Piano(InstrumentType.PERCUSSION, "wood", "black", 88, 500, 1000);
   }
 
 
   @Test
-  public void hasType(){
-    assertEquals("percussion", classicPiano.getType());
+  public void hasType() {
+    assertEquals(InstrumentType.PERCUSSION, classicPiano.getType()); // getType inherited from superclass
+  }
+
+
+
+  @Test
+  public void canPlay() {
+    assertEquals("Dooon Doooon DOOOOOOoooooon", classicPiano.play());
   }
 
 

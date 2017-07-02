@@ -4,15 +4,15 @@ import behaviours.*;
 
 
 public class Guitar extends Instruments implements Sellable, Playable {
-  
+
   String colour;
   int numberOfStrings;
   int buyPrice;
   int sellPrice;
- 
 
 
-  public Guitar(String type, String material, String colour, int numberOfStrings, int buyPrice, int sellPrice) { // constructor
+  // constructor - initialises the variables of the object 
+  public Guitar(InstrumentType type, String material, String colour, int numberOfStrings, int buyPrice, int sellPrice) { // although type comes from superclass, the argument still needs to be referred to as ENUM
     super(type, material);
     this.colour = colour;
     this.numberOfStrings = numberOfStrings;
@@ -23,6 +23,8 @@ public class Guitar extends Instruments implements Sellable, Playable {
   public String play() { // from Playable interface
     return "wwwaahhhhhwahwahwahwahhhh";
   }
+
+
 
   public int calculateMarkup() { // from Sellable interface
     return sellPrice - buyPrice;

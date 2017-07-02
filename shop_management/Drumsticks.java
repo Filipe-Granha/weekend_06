@@ -9,9 +9,9 @@ public class Drumsticks implements Sellable {
   String size;
   int buyPrice;
   int sellPrice;
- 
+  
 
-
+  // constructor - initialises the variables of the object 
   public Drumsticks(String brand, String size, int buyPrice, int sellPrice) {
     this.brand = brand;
     this.size = size;
@@ -21,9 +21,9 @@ public class Drumsticks implements Sellable {
 
 
 
-public String getBrand() {
-  return this.brand;
-}
+  public String getBrand() {
+    return this.brand;
+  }
   
 
   public int calculateMarkup() { // from Sellable interface

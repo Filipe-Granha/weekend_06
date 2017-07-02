@@ -9,7 +9,7 @@ public class DrumsticksTest {
   Drumsticks zDrumsticks;
 
   @Before
-  public void before() {
+  public void before() { // creates a drumsticks object to be used in all the tests
     zDrumsticks = new Drumsticks("Zildjian", "5A", 10, 20);
   }
 
