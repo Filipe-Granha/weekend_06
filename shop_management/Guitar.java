@@ -1,12 +1,16 @@
 package shop_management;
 import behaviours.*;
 
+
+
 public class Guitar extends Instruments implements Sellable, Playable {
   
   String colour;
   int numberOfStrings;
   int buyPrice;
   int sellPrice;
+ 
+
 
   public Guitar(String type, String material, String colour, int numberOfStrings, int buyPrice, int sellPrice) { // constructor
     super(type, material);
@@ -17,10 +21,10 @@ public class Guitar extends Instruments implements Sellable, Playable {
   }
 
   public String play() { // from Playable interface
-    return "wwwaahhhhhwahwahwahwahhhh"
+    return "wwwaahhhhhwahwahwahwahhhh";
   }
 
-  public int calculateMarkup(int buyPrice, int sellPrice) { // from Sellable interface
+  public int calculateMarkup() { // from Sellable interface
     return sellPrice - buyPrice;
   }
 }
